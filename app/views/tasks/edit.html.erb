@@ -12,6 +12,15 @@
     <%= f.text_field :details, class: 'form-control' %>
   </div>
 
-  <%= f.submit class: 'btn btn-primary' %>
+  <div class="form-group">
+    <%= f.label "Checked ?" %>
+    <%= f.check_box :completed %>
+  </div>
+
+  <%= f.submit class: 'btn btn-success' %>
 <% end %>
 </div>
+
+<%= link_to tasks_path do %>
+ <div class="inline backlist" ><i class="far fa-hand-point-left"></i><p>BACK TO LIST</p></div>
+<% end %>

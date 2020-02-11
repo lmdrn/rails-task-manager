@@ -1,18 +1,27 @@
 <h1>My tasks</h1>
-<% @tasks.each do |task| %>
-  <div class="all">
-    <div class="complete">
-      <p><%= task.completed %></p>
-    </div>
-        <h2><%= link_to task.title, task_path(task) %></h2>
-    <div class="delete">
-      <%= link_to "Delete", task_path(task),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    </div>
-  </div>
-<% end %>
 <br>
-<p><%= link_to "Add a new task", tasks_new_path %></p>
+<div class="tasks">
+  <% @tasks.each do |task| %>
+    <div class="inline">
 
+    <div class="completed">
+      <% if task.completed == true %>
+      <i class="fas fa-check-circle"></i>
+      <% else %>
+      <i class="far fa-check-circle"></i>
+      <% end %>
+    </div>
+    <h3><%= link_to task.title, task_path(task) %><h3>
+
+    <%= link_to task_path(task), method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="fas fa-trash-alt"></i>
+    <% end %>
+    </div>
+  <% end %>
+</div>
+<br>
+
+<%= link_to tasks_new_path do %>
+<div class="inline backlist"><i class="far fa-plus-square "></i><p>Add a new task</p></div>
+<% end %>
 

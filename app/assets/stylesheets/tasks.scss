@@ -2,11 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 30px;
-}
-
 h1 {
   font-weight: bolder;
   text-align: center;
@@ -18,20 +13,19 @@ h1 {
   display: flex;
   align-items: center;
   font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
 }
 
+
 .complete p {
+  text-align: center;
+  width: 50px;
+  height: 20px;
   background-color: rgb(220,220,220);
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 0px;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .delete {
@@ -42,9 +36,31 @@ h1 {
 
 }
 
-.delete a {
+.fa-trash-alt {
   color: red;
+  margin: 10px;
+}
 
+.margin{
+  margin: 10px;
+}
+
+.backlist {
+  color: grey;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.inline i {
+margin: 10px;
+}
+
+.inline p {
+margin: 0;
 }
 
 .form {
@@ -54,4 +70,8 @@ h1 {
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
 }

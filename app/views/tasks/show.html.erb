@@ -1,8 +1,21 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<%= link_to "Edit this task", edit_path %>
+<div class="margin">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+</div>
+<%= link_to edit_path do %>
+<div class="inline"><i class="far fa-edit"></i><p>Edit this task</p></div>
+<% end %>
 <br>
-<br>
-<%= link_to " < Back to list", tasks_path %>
 
+<div class="completed">
+      <% if @task.completed == true %>
+      <div class=inline><i class="fas fa-check-circle"></i><p>complete</p></div>
+      <% else %>
+      <div class=inline><i class="far fa-check-circle"></i><p>uncomplete</p></div>
+      <% end %>
+    </div>
+
+<%= link_to tasks_path do %>
+ <div class="inline backlist" ><i class="far fa-hand-point-left"></i><p>BACK TO LIST</p></div>
+<% end %>
 
